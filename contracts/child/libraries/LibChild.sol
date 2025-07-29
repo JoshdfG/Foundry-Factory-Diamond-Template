@@ -30,10 +30,10 @@ library LibChild {
         l.organisationAdmin = layout.organisationAdmin;
     }
 
-    bytes32 constant ORGANISATION_STORAGE_POSITION = keccak256("lib.organisation.storage");
+    bytes32 constant CHILD_STORAGE_POSITION = keccak256("lib.child.storage");
 
     function orgStorage() internal pure returns (Layout storage org) {
-        bytes32 position = ORGANISATION_STORAGE_POSITION;
+        bytes32 position = CHILD_STORAGE_POSITION;
         assembly {
             org.slot := position
         }
